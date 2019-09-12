@@ -24,7 +24,7 @@ public class DataLoader implements ApplicationRunner {
         recipe1.setName("Schabowy");
         recipe1.setDescription("Usmazyc i zjeść");
         recipe1.setPrepareTime(60);
-        recipe1.setId(1L);
+//        recipe1.setId(1L);
 //        recipe1.addRecipeType();
         recipeRepository.save(recipe1);
     }
