@@ -5,8 +5,6 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -20,20 +18,10 @@ public class Recipe {
     Integer prepareTime;
     String description;
     @OneToMany
-    List<IngredientAmount> ingredientList;
-    @OneToMany
     Set<RecipeType> types;
 
     public Recipe() {
-        ingredientList = new LinkedList<>();
         types = new HashSet<>();
-    }
-
-    public void addIngredientAmount(IngredientAmount ingredientAmount) {
-        if (ingredientList == null) {
-            ingredientList = new LinkedList<>();
-        }
-        ingredientList.add(ingredientAmount);
     }
 
     public void addRecipeType(RecipeType type) {
