@@ -17,11 +17,17 @@ public class Recipe {
     String name;
     Integer prepareTime;
     String description;
-    @OneToMany
+    @OneToMany(mappedBy = "recipe")
     Set<RecipeType> types;
 
     public Recipe() {
         types = new HashSet<>();
+    }
+
+    public Recipe(String name, Integer prepareTime, String description) {
+        this.name = name;
+        this.prepareTime = prepareTime;
+        this.description = description;
     }
 
     public void addRecipeType(RecipeType type) {

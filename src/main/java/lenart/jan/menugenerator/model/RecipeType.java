@@ -18,4 +18,8 @@ public class RecipeType {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     String name;
+
+    public RecipeType(String name) {
+        this.name = name;
+    }
 }
