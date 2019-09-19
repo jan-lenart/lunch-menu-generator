@@ -17,7 +17,8 @@ public class Recipe {
     String name;
     Integer prepareTime;
     String description;
-    @OneToMany(mappedBy = "recipe")
+
+    @ManyToMany
     Set<RecipeType> types;
 
     public Recipe() {

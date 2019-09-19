@@ -17,7 +17,6 @@ public class DataLoader implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-//        addRecipeTypes();
         addRecipes();
     }
 
@@ -63,10 +62,7 @@ public class DataLoader implements ApplicationRunner {
         recipe2.setName("Kurczak pieczony");
         recipe2.setDescription("Upiec i zjeść");
         recipe2.setPrepareTime(120);
-        recipe2.addRecipeType(type4);
+        recipe2.addRecipeType(type3);
         recipeRepository.save(recipe2);
-    }
-
-    private void addRecipeTypes() {
     }
 }
